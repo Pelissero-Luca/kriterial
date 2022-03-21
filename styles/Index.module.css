@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'titolo';
+    font-style: normal;
+    font-weight: normal;
+    src: local('titolo'), url('Font/dsjug_demo.woff') format('woff');
+}
+
+/* ------------------------------------------------------------------ */
+
+/**
+ * Stock Ticker styling
+ */
+
+.ticker_wrap {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-left: 100%;
+    box-sizing: content-box;
+}
+
+.ticker {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    animation: ticker 30s infinite linear;
+}
+
+.tickerItemUp {
+    display: inline-block;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: greenyellow;
+}
+
+.tickerItemDown {
+    display: inline-block;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: red;
+}
+
+.quoteUp {
+    font-weight: bold;
+    color: greenyellow;
+}
+
+.quoteDown {
+    font-weight: bold;
+    color: red;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+/* ------------------------------------------- */
+
+.main {
+    color: #1A202C;
+    margin-top: 20px;
+    height: 100vh;
+    width: 100%;
+}
+
+.home_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home {
+    height: 25rem;
+    width: 50rem;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    border-radius: 20px;
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.287);
+}
+
+.home h1 {
+    font-family: titolo;
+    font-size: 8rem;
+    font-weight: normal;
+    color: #1A202C;
+    margin: 0;
+}
+
+.home h3 {
+    font-size: larger;
+    font-weight: bold;
+    color: #1A202C;
+    margin: 0;
+}
+
+/* card pinterest ------------------------------------------- */
+
