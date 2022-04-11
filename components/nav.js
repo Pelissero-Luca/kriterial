@@ -2,17 +2,6 @@ import Link from 'next/link'
 import navStyle from '../styles/Nav.module.css'
 
 const nav = () => {
-    const active = (e = null) => {
-        let elementActive = document.getElementsByClassName(navStyle.active);
-        elementActive[0].classList.remove(navStyle.active)
-        if (e == "project") {
-            let projectNav = document.getElementById("project")
-            projectNav.classList.add(navStyle.active)
-        }
-        else {
-            e.target.classList.add(navStyle.active)
-        }
-    };
 
     const dropdownFunction = () => {
         let dorpdownContent = document.getElementsByClassName(navStyle.dorpdown_content);
@@ -50,7 +39,7 @@ const nav = () => {
                             <div className={navStyle.divider}></div>
                             <li><img src="https://img.icons8.com/fluency-systems-regular/20/000000/requires-interpreter.png" /><a>Lenguage</a></li>
                             <div className={navStyle.divider}></div>
-                            <li><img src="https://img.icons8.com/ios-glyphs/20/000000/like--v1.png" /><a>Favorites</a></li>
+                            <li><img src="https://img.icons8.com/ios-glyphs/20/000000/like--v1.png" /><Link href='/account/favorited'><a>Favorited</a></Link></li>
                             <div className={navStyle.divider}></div>
                             <li><img src="https://img.icons8.com/material-outlined/20/000000/eyes-cartoon.png" /><a>Watch List</a></li>
                             <div className={navStyle.divider}></div>

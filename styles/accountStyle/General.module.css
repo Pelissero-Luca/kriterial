@@ -1,0 +1,57 @@
+.windowGeneral {
+    margin-top: 25px;
+    margin-right: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    grid-auto-flow: row dense;
+}
+
+.windowItem {
+    border-radius: 20px;
+    border: 1px solid black;
+    height: auto;
+    margin: 0.3rem;
+}
+
+.windowItem:nth-last-of-type(3) {
+    grid-column: 1/2;
+    grid-row: span 2;
+}
+
+.windowProfile {
+    text-align: center;
+}
+
+.imgUser {
+    margin: 0 auto;
+    margin-top: 45px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.publicAddress {
+    display: flex;
+    margin: 0 auto;
+    height: 30px;
+    width: 200px;
+    border: 1px solid #7D7D7D;
+    border-radius: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.publicAddress img{
+    padding: 2px;
+}
+
+.publicAddress span{
+    margin: 0;
+    width: 190px;
+    line-height: 30px;
+    color: #7D7D7D;
+    cursor: pointer;
+}

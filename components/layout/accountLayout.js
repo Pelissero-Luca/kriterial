@@ -1,7 +1,21 @@
+import Link from 'next/link'
 import style from '../../styles/accountStyle/Account.module.css'
 
 
-const account = ({children}) => {
+const account = ({ children }) => {
+
+    const active = (e = null) => {
+        let elementActive = document.getElementsByClassName(navStyle.active);
+        elementActive[0].classList.remove(navStyle.active)
+        if (e == "project") {
+            let projectNav = document.getElementById("project")
+            projectNav.classList.add(navStyle.active)
+        }
+        else {
+            e.target.classList.add(navStyle.active)
+        }
+    };
+
     return (
         <>
             <div className={style.main}>
@@ -10,11 +24,11 @@ const account = ({children}) => {
                         <ul className={style.menuLinks}>
                             <li>
                                 <img src="https://img.icons8.com/fluency-systems-regular/30/ffffff/dog-house.png" />
-                                <a>General</a>
+                                <Link href='/account/general'><a>General</a></Link>
                             </li>
                             <li>
                                 <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/30/ffffff/external-like-instagram-flatart-icons-outline-flatarticons.png" />
-                                <a>Favorited</a>
+                                <Link href='/account/favorited'><a>Favorited</a></Link>
                             </li>
                             <li>
                                 <img src="https://img.icons8.com/ios/30/ffffff/collectibles.png" />
