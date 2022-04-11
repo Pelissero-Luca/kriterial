@@ -46,7 +46,7 @@ const nav = () => {
                     <img src="https://img.icons8.com/small/35/000000/user-male-circle.png" onClick={dropdownFunction} onMouseOver={dropdownFunction} />
                     <div className={navStyle.dorpdown_content} onMouseLeave={dropdownFunction}>
                         <ul className={navStyle.links}>
-                            <li><img src="https://img.icons8.com/ios-glyphs/20/000000/user--v1.png" /><Link href='/account'><a>Profile</a></Link></li>
+                            <li><img src="https://img.icons8.com/ios-glyphs/20/000000/user--v1.png" /><Link href='/account/general'><a>Profile</a></Link></li>
                             <div className={navStyle.divider}></div>
                             <li><img src="https://img.icons8.com/fluency-systems-regular/20/000000/requires-interpreter.png" /><a>Lenguage</a></li>
                             <div className={navStyle.divider}></div>
